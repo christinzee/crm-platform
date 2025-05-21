@@ -2,7 +2,7 @@
 
 A modern CRM dashboard application built with Next.js, TypeScript, Prisma, and Tailwind CSS. This project demonstrates a performant, maintainable, and delightful dashboard UI using mock data. Other CRM modules (deals, companies, contacts, tasks, calendar) are scaffolded but not yet implemented.
 
-![CRM Dashboard Screenshot](crm-dashboard.png)
+<img src="/public/crm-dashboard.png" alt="CRM Dashboard Screenshot" />
 
 ## Features
 
