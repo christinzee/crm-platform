@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Flame } from "lucide-react";
 import React from "react";
 
 export type LeaderboardMember = { name: string; dealTotal: number };

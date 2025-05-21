@@ -7,6 +7,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/ProgressBar";
+import { Badge } from "./ui/badge";
 
 export interface QuotaProgressCardProps {
   current: number; // e.g. 27000

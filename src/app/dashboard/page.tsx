@@ -95,7 +95,6 @@ export default function Page() {
               emailsGoal={10}
               meetingsBooked={1}
               meetingsGoal={3}
-              streakRemaining={2}
             />
           </div>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4">

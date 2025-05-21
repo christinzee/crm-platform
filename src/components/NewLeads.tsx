@@ -6,6 +6,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
+import { Badge } from "./ui/badge";
 /*
  * Type representing a new incoming lead.
  */

@@ -28,7 +28,6 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavHeader />
       </SidebarHeader>
       <SidebarContent>
-        {/* <SearchForm /> */}
         <NavMain />
       </SidebarContent>
       <SidebarFooter>
