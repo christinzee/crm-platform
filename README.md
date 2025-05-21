@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CRM Platform
+
+A modern CRM dashboard application built with Next.js, TypeScript, Prisma, and Tailwind CSS. This project demonstrates a performant, maintainable, and delightful dashboard UI using mock data. Other CRM modules (deals, companies, contacts, tasks, calendar) are scaffolded but not yet implemented.
+
+---
+
+## Features
+
+- **Dashboard**:
+
+  - Visualizes sales performance, quotas, activities, and leaderboards using mock data.
+  - Includes cards for quota progress, daily activity, new leads, top opportunities, upcoming tasks, follow-up reminders, and a leaderboard.
+  - Responsive, accessible, and themeable interface using Tailwind CSS, Shadcn UI, and Radix UI primitives.
+
+- **Other Pages**:
+  - **Deals, Companies, Contacts, Tasks, Calendar**: Pages are scaffolded but not yet functional.
+
+---
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI, Radix UI, Recharts
+- **Backend**: Next.js API routes scaffolded, Prisma ORM, PostgreSQL (planned for future)
+- **Other**: Lucide React Icons, DnD Kit
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+
+### Installation
 
 ```bash
+pnpm install
+# or
+npm install
+# or
+yarn install
+```
+
+### Development
+
+```bash
+pnpm dev
+# or
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+  app/
+    dashboard/   # Dashboard UI (mock data)
+    deals/       # Placeholder
+    companies/   # Placeholder
+    contacts/    # Placeholder
+    tasks/       # Placeholder
+    calendar/    # Placeholder
+    api/         # Scaffolded API endpoints
+  components/    # Reusable UI components (Shadcn, Radix, custom)
+  hooks/         # Custom React hooks
+  lib/           # Schemas, utilities
+prisma/          # Prisma schema (for future use)
+public/          # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Current Status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Only the dashboard page is implemented and uses mock data.
+- All other pages and backend features are placeholders for future development.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `pnpm dev` – Start development server
+- `pnpm build` – Build for production
+- `pnpm start` – Start production server
+- `pnpm lint` – Lint code
+
+---
+
+## License
+
+MIT
+
+---
+
+**Note:**  
+This project is a work in progress. Only the dashboard is functional at this time.
