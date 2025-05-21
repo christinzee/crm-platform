@@ -15,7 +15,7 @@ export async function GET(
     if (!contact)
       return NextResponse.json({ error: "Contact not found" }, { status: 404 });
     return NextResponse.json(contact);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to fetch contact" },
       { status: 500 }
@@ -39,7 +39,7 @@ export async function PUT(
       },
     });
     return NextResponse.json(contact);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to update contact" },
       { status: 500 }
@@ -55,7 +55,7 @@ export async function DELETE(
   try {
     await prisma.contact.delete({ where: { id: params.id } });
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to delete contact" },
       { status: 500 }

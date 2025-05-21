@@ -13,7 +13,7 @@ export async function GET(
     if (!task)
       return NextResponse.json({ error: "Task not found" }, { status: 404 });
     return NextResponse.json(task);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to fetch task" },
       { status: 500 }
@@ -37,7 +37,7 @@ export async function PUT(
       },
     });
     return NextResponse.json(task);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to update task" },
       { status: 500 }
@@ -53,7 +53,7 @@ export async function DELETE(
   try {
     await prisma.task.delete({ where: { id: params.id } });
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to delete task" },
       { status: 500 }

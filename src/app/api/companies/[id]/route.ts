@@ -15,7 +15,7 @@ export async function GET(
     if (!company)
       return NextResponse.json({ error: "Company not found" }, { status: 404 });
     return NextResponse.json(company);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to fetch company" },
       { status: 500 }
@@ -35,7 +35,7 @@ export async function PUT(
       data: { name: data.name },
     });
     return NextResponse.json(company);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to update company" },
       { status: 500 }
@@ -51,7 +51,7 @@ export async function DELETE(
   try {
     await prisma.company.delete({ where: { id: params.id } });
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to delete company" },
       { status: 500 }

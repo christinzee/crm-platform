@@ -1,13 +1,13 @@
 import React from "react";
 import { ProgressBar } from "@/components/ui/ProgressBar";
+import { PhoneIcon, MailIcon, CalendarIcon } from "lucide-react";
 import {
-  FlameIcon,
-  CheckIcon,
-  PhoneIcon,
-  MailIcon,
-  CalendarIcon,
-} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 
 /**
  * Props for DailyActivityCard.
@@ -19,7 +19,6 @@ export interface DailyActivityCardProps {
   emailsGoal: number;
   meetingsBooked: number;
   meetingsGoal: number;
-  streakRemaining: number; // e.g. 2 means 'Book 2 more for a streak!'
 }
 
 /**
@@ -32,7 +31,6 @@ export const DailyActivityCard: React.FC<DailyActivityCardProps> = ({
   emailsGoal,
   meetingsBooked,
   meetingsGoal,
-  streakRemaining,
 }) => {
   const callsComplete = callsMade >= callsGoal;
   const meetingsComplete = meetingsBooked >= meetingsGoal;
@@ -40,8 +38,10 @@ export const DailyActivityCard: React.FC<DailyActivityCardProps> = ({
   return (
     <Card className="w-full lg:w-sm mx-auto">
       <CardHeader>
-        <CardTitle>Today's Activity</CardTitle>
-        <CardDescription>Stay on top of your daily sales efforts.</CardDescription>
+        <CardTitle>Today&apos;s Activity</CardTitle>
+        <CardDescription>
+          Stay on top of your daily sales efforts.
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         {/* Calls */}

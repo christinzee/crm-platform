@@ -13,7 +13,7 @@ export async function GET(
     if (!deal)
       return NextResponse.json({ error: "Deal not found" }, { status: 404 });
     return NextResponse.json(deal);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to fetch deal" },
       { status: 500 }
@@ -40,7 +40,7 @@ export async function PUT(
       },
     });
     return NextResponse.json(deal);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to update deal" },
       { status: 500 }
@@ -56,7 +56,7 @@ export async function DELETE(
   try {
     await prisma.deal.delete({ where: { id: params.id } });
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to delete deal" },
       { status: 500 }

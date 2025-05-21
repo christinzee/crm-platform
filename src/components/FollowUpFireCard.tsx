@@ -5,14 +5,8 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { AlertTriangle, Flame, Clock } from "lucide-react";
 import React from "react";
 import Link from "next/link";
-
-// Mock data for demonstration
-const overdueFollowUps = 6;
-const inactiveLeads = 12;
 
 /**
  * Type representing a lead needing follow-up.
@@ -65,7 +59,9 @@ export function FollowUpFireCard() {
     <Card className="w-full mx-auto">
       <CardHeader>
         <CardTitle>Follow-Up</CardTitle>
-        <CardDescription>Revive deals that need your attention now.</CardDescription>
+        <CardDescription>
+          Revive deals that need your attention now.
+        </CardDescription>
       </CardHeader>
       <CardContent className="px-0 pb-0">
         {/* <div className="flex gap-4 px-6 pb-2">

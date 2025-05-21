@@ -5,12 +5,10 @@ import {
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuBadge,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import {
   LayoutDashboard,
-  Bell,
   Handshake,
   Users,
   Building,
@@ -18,9 +16,7 @@ import {
   Calendar,
   PlusCircleIcon,
   SearchIcon,
-  User,
 } from "lucide-react";
-import { Button } from "./ui/button";
 
 export function NavMain() {
   return (
