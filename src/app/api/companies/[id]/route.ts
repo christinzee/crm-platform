@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "@/lib/prisma";
 
 function getIdFromRequest(request: NextRequest): string | null {
   const id = request.nextUrl.pathname.split("/").pop();
