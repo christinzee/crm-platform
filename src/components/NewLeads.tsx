@@ -6,9 +6,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-
-/**
+/*
  * Type representing a new incoming lead.
  */
 export type NewLead = {
@@ -87,7 +85,7 @@ export function NewLeads() {
       <CardHeader>
         <CardTitle>Incoming Leads</CardTitle>
         <CardDescription>
-        Monitor and prioritize your latest leads.
+          Monitor and prioritize your latest leads.
         </CardDescription>
       </CardHeader>
       <CardContent className="px-0 pb-0">

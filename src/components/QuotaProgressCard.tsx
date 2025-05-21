@@ -1,7 +1,12 @@
 import * as React from "react";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription,
+} from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Badge } from "@/components/ui/badge";
 
 export interface QuotaProgressCardProps {
   current: number; // e.g. 27000
@@ -30,7 +35,9 @@ export const QuotaProgressCard: React.FC<QuotaProgressCardProps> = ({
     <Card className="w-full mx-auto">
       <CardHeader>
         <CardTitle>Monthly Quota Progress</CardTitle>
-        <CardDescription>Track your progress and stay on pace to hit quota.</CardDescription>
+        <CardDescription>
+          Track your progress and stay on pace to hit quota.
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <div className="flex items-center justify-between text-sm font-medium">
